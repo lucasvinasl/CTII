@@ -1,0 +1,52 @@
+SERVIÇOS:
+- LAVAÇÃO COMPLETA
+- IMPERMEABILIZAÇÃO DE BANCOS
+- LAVAÇÃO DE MOTOR
+- POLIMENTO
+- POLIMENTO ESPELHADO
+
+-> VALOR DO SERVIÇO COM BASE NO TAMANHO DO VEÍCULO
+
+TAMANHO DO VEÍCULO:
+PEQUENO
+MÉDIO
+GRANDE
+PADRÃO/COMUM
+MOTO
+
+-> TAXA COMUM / PREÇO PADRÃO NO SERVIÇO DE POLIMENTO DE RODAS INDEPENDENTE DO TAMANHO
+
+VEÍCULO:
+PLACA
+MODELO
+MARCA
+CATEGORIA
+
+
+PROPRIETÁRIO DO VEÍCULO/CLIENTE:
+NOME
+CONTATO
+EMAIL
+CPF/CNPJ - PESSOA FÍSICA OU JURÍDICA
+
+
+-> Tipos de serviços que podem ser prestados de acordo com os tipos de categorias de veículos, levando em consideração dados como descrição e valor do serviço
+
+ORDEM de SERVIÇO:
+Pode ter vários serviços na mesma OS
+Id
+Vinculada a 1 veículo
+Número
+Data
+Total
+Desconto possível (total com desconto, total sem desconto)
+Status da OS - Aberto, Fechado, Cancelado
+
+OS Aberta -> pode atualizar, demais status não pode mais atualizar.
+
+Dentro de uma OS o valor do serviço pode mudar em relação valor base do serviço
+
+
+Pontuação/Plano de fidelidade ao cliente:
+Cada serviço na OS gera pontos que poderá ser trocado por serviços ou descontos
+Pontuação exclusiva e intransferível para uso do cliente.
