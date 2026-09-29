@@ -1,0 +1,22 @@
+Prezado aluno, finalizamos a parte teórica da criação de formulários na linguagem HTML5. Agora, é o momento de você pôr em prática tudo o que foi visto.
+
+Para isso, daremos início à implementação do Sistema Norteador, que simula o comportamento de uma aplicação web destinada a oferecer alguns serviços de lavação de carros para clientes em geral.
+
+O desenvolvimento desta aplicação passará por diversas etapas, cada uma delas relacionadas a momentos importantes do desenvolvimento web em nosso curso.
+
+Desta forma, propomos o seguinte: você deverá implementar a estrutura necessária, por meio de links e controles HTML de formulários, usando o editor VSCode (ou outro de sua escolha), de modo a criar a interface gráfica mínima do sistema web proposto neste desafio.
+
+Esta tarefa será composta de três arquivos HTML separados. 
+
+O primeiro arquivo será o equivalente à página de entrada da nossa aplicação web (a página home.html ou index.html). Esta página é bastante simples, contendo, basicamente, dois links:
+
+    um dos links irá conduzir o usuário para a página de cadastro dos dados do cliente da aplicação;
+    o outro link abrirá, no navegador, a página de cadastro dos dados do veículo que irá utilizar os serviços de lavação.
+
+O segundo destes arquivos irá conter um formulário com os campos básicos para cadastro dos dados do cliente que está solicitando os serviços de lavação.
+
+Este formulário deve solicitar, do cliente, as seguintes informações cadastrais: nome, endereço, e-mail, um nome de usuário, uma senha qualquer e um número de celular, juntamente com um botão submit de envio de dados. Cada um destes campos deve utilizar o controle HTML adequado para a sua criação.
+
+O terceiro arquivo construirá o formulário contendo os dados de cadastro do veículo que utilizará os serviços de lavação. Os campos mínimos deste formulário são os seguintes: marca do veículo, modelo, número da placa e um botão de envio de dados.
+
+É importante frisar que a estrutura proposta, neste primeiro momento, não será fixa. Ela irá sofrer alterações, à medida que evoluirmos em nosso aprendizado. Então, caro aluno, mãos à obra e bom trabalho!

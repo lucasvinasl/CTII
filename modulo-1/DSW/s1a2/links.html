@@ -3,13 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CII - Links</title>
 </head>
 <body>
+    <h3>Principais Atributos da tag < a > </h3>
+    <p>href - url do link</p>
+    <p>target - tipo de abertura do link: _sef(mesma aba), _blank(nova aba), _parent, _top</p>
+    <p>rel - relação entre o documento atual e o documento vinculado (SEO): noopener, noreferrer, nofollow, sponsored, author</p>
+    <p>download ou download="novo-nome.pdf" - navegador baixar o recurso</p>
+    <p>hreflang - idioma do documento (pt-BR, en, es)</p>
+    <p>type - tipo de mídia/MIME type - application/pdf, image, png</p>
 
-    <p> Link na Web </p>
-    <a href="https://translate.google.com.br/" target="_blank">Google Tradutor</a>
-    <!-- target="_blank" abre o link em nova guia -->
-    
+    <h4>Exemplos de Uso</h4>
+    <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">
+        Nova Aba
+    </a>
+    <p>
+        Ao abrir links em uma nova aba com target="_blank", use obrigatoriamente rel="noopener" (evita que a nova página controle a página de origem via JS) e rel="noreferrer" (impede o envio do cabeçalho de referência).
+    </p>
+
+    <a href="https://www.w3schools.com/html/">
+        Mesma aba
+    </a>
+
+    <p>
+        Navegação na Mesma Página
+    </p>
+    <a href="#w3school">Link Âncora</a>
+    <section id="w3school">
+        <h4>A página pula pra cá</h4>
+    </section>
+
+    <p> Ação direta - dispara alguma ação para abrir o app de email, ligação</p>
+    <a href="tel:+5511999999999">Ligar para o Suporte</a>
+    <p></p>
+    <a href="mailto:suporte@empresa.com?subject=Duvida">Enviar e-mail</a>
+
+    <p>Download de arquivos</p>
+    <a href="../image/neymar.jpg" download="Imagem-do-craque.jpg" type="image/jpeg" target="_blank">
+        Baixar imagem do ome
+    </a>
+
+    <p>Bloco clicável</p>
+    <a href="/produtos/notebook" class="card-link">
+        <article>
+            <img src="notebook.jpg" alt="Notebook ultrafino">
+            <h3>Notebook Pro</h3>
+            <p>Confira as especificações técnicas e preço.</p>
+        </article>
+    </a>
+
+    <p>Estilização CSS</p>
+    <p>
+        /* 1. Unvisited (:link) - Link não visitado */
+        a:link {
+        color: #0066cc;
+        text-decoration: underline;
+        }
+
+        /* 2. Visited (:visited) - Link já visitado pelo usuário */
+        a:visited {
+        color: #551a8b;
+        }
+
+        /* 3. Hover (:hover) - Quando o cursor passa por cima do link */
+        a:hover {
+        color: #e63946;
+        text-decoration: none;
+        }
+
+        /* 4. Active (:active) - No momento exato do clique */
+        a:active {
+        color: #ff0000;
+        }
+
+        /* Estado de Foco (:focus) - Acessibilidade via navegação por teclado */
+        a:focus {
+        outline: 2px solid #e63946;
+        outline-offset: 3px;
+        }
+    </p>
 </body>
 </html>

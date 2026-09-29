@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CII - Formulários </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>Elementos Estruturais</h3>
+    <p>form - container principal - destino dos dados (action) e método de envio (method)</p>
+    <p>label - rótulo deu um campo. associado ao input por for="id_do_campo"</p>
+    <p>fieldset - agrupa logicamente campos relacionados dentro do form</p>
+    <p>legend - legenda de um fieldset</p>
+    <p>datalist - opções predefinidas para preenchidimento automático de um input</p>
+    <p>output - resultado da ação do usuário</p>
+
+    <h3>Tipos de Input</h3>
+    <p>email</p>
+    <p>tel</p>
+    <p>number - min, max, step</p>
+    <p>date/time/datetime-local</p>
+    <p>range - slider</p>
+    <p>color</p>
+    <p>search</p>
+    <p>url</p>
+
+    <!-- Atributos fundamentais em ação -->
+    <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuário" required autofocus
+        autocomplete="username" minlength="3" maxlength="20">
+
+    <h3>Exemplo de Formulário Completo</h3>
+
+    <form action="/enviar-dados" method="POST" enctype="multipart/form-data">
+
+        <fieldset>
+
+            <legend>Dados de Contato</legend>
+
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required minlength="2">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="emai" required placeholder="sememail@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="nivel">Nível de Experiência:</label>
+                <input type="range" id="nivel" name="nivel" min="1" max="10" value="5">
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Preferências do Perfil</legend>
+
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" name="estado" list="lista-estados" placeholder="Digite ou selecione...">
+                <datalist id="lista-estados">
+                    <option value="SP"></option>
+                    <option value="RJ"></option>
+                    <option value="RN"></option>
+                </datalist>
+            </div>
+
+            <div class="form-group">
+                <label for="mesangem">Mesangem / Observbação:</label>
+                <textarea name="mensagem" id="mensagem" rows="4" placeholder="Deixe sua mensagem aqui..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="curriculo">Anexar Currículo (PDF):</label>
+                <input type="file" name="curriculo" id="curriculo" accept=".pdf" required>
+            </div>
+        </fieldset>
+
+        <div class="form-action">
+            <button type="submit">Enviar Cadastro</button>
+            <button type="reset">Limpar Campos</button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

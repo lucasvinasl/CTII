@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wash PDF - Cadastro de Veículo</title>
+</head>
+
+<body>
+
+    <center>
+        <h1 class="titulo-index">Wash PDV</h1>
+        <p class="sub-tit-index">Plataforma de Gestão de Estética Automotiva</p>
+        <hr>
+        <p class="sub-tit-index">Realizar Cadastro do Veículo</p>
+
+        <main>
+
+            <form action="/cadastrar-veiculo" method="POST">
+
+                <table align="center">
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend>Cadastro:</legend>
+
+                                <table>
+                                    <tr>
+                                        <td align="left">
+                                            <label for="marca">Marca:</label>
+                                        </td>
+
+                                        <td align="left">
+                                            <input type="text" name="marca" id="marca" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            <label for="modelo">Modelo:</label>
+                                        </td>
+
+                                        <td align="left">
+                                            <input type="text" name="modelo" id="modelo" required>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">
+                                            <label for="placa">Placa:</label>
+                                        </td>
+
+                                        <td align="left">
+                                            <input type="text" name="placa" id="placa" required>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+                <div>
+                    <button type="submit">Enviar Cadastro</button>
+                    <button type="reset">Limpar Campos</button>
+                </div>
+
+            </form>
+
+            <form action="index.html">
+                <button type="submit">Voltar</button>
+            </form>
+
+        </main>
+
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CII - Tabelas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>Principais Elementos</h3>
+    <p>table - container principal</p>
+    <p>caption - título/descrição da tabela</p>
+    <p>thead - container das linhas do cabeçalho (< tr)</p>
+            <p>tbody - container do conteúdo</p>
+            <p>tfoot - container do rodapé</p>
+            <p>tr - table row - linha de célula</p>
+            <p>th - célula do cabeçalho</p>
+            <p>td - Table Data - célula</p>
+            <p>col ou colgroup - aplicar estilo ou prop em uma coluna inteira</p>
+
+            <h3>Principais Atributo</h3>
+            <p>scope - aplicado em th - direção do cabeçalho para os leitores: col / row / colgroup / rowgroup</p>
+            <p>colspan - aplicado em th e td - quantas colunas a célula deve expandir horizontalmente</p>
+            <p>rowspan - aplicado em th e td - quantas linhas a célula deve expandir verticalmente</p>
+            <p>headers - aplicado em td - vincula a célula ao id de um ou mais cabeçalhos th</p>
+
+            <h3> Exemplos </h3>
+
+            <table>
+
+                <caption>Tabela 1 - Relatório Financeiro do Primeiro Semestre de 2026</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Mês</th>
+                        <th scope="col">Receita</th>
+                        <th scope="col">Despesas</th>
+                        <th scope="col">Lucro Líquido</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Janeiro</th>
+                        <td>R$ 45.000</td>
+                        <td>R$ 20.000</td>
+                        <td>R$ 25.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Fevereiro</th>
+                        <td>R$ 52.000</td>
+                        <td>R$ 22.000</td>
+                        <td>R$ 30.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Março</th>
+                        <td>R$ 60.000</td>
+                        <td>R$ 25.000</td>
+                        <td>R$ 35.000</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th scope="row">Total Geral</th>
+                        <td>R$ 157.000</td>
+                        <td>R$ 67.000</td>
+                        <td>R$ 90.000</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <p></p>
+
+            <table>
+                <caption>Tabela 2 - Grade Horária de Aulas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Dia</th>
+                        <th scope="col">Horário</th>
+                        <th scope="col">Disciplina</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- O rowspan faz a célula "Segunda-feira" ocupar 2 linhas -->
+                        <th scope="row" rowspan="2">Segunda-feira</th>
+                        <td>08:00 - 10:00</td>
+                        <td>HTML5 & CSS3</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 12:00</td>
+                        <td>JavaScript Avançado</td>
+                    </tr>
+                    <tr>
+                        <!-- O colspan faz o intervalo ocupar 2 colunas -->
+                        <td colspan="2">12:00 - 13:00</td>
+                        <td>Almoço / Intervalo</td>
+                    </tr>
+                </tbody>
+            </table>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+/* Estilo base para os campos */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estado de Foco (Acessibilidade) */
+input:focus, textarea:focus {
+  outline: 2px solid #0066cc;
+  border-color: #0066cc;
+}
+
+/* Estila campos OBRIGATÓRIOS */
+input:required {
+  border-left: 4px solid #e63946;
+}
+
+/* Estila o campo quando o valor for VÁLIDO */
+input:valid {
+  border-color: #2a9d8f;
+}
+
+/* Estila o campo quando o valor for INVÁLIDO (após interação) */
+input:invalid:not(:placeholder-shown) {
+  border-color: #e63946;
+  background-color: #fff0f0;
+}
+
+/* Estila campos DESABILITADOS */
+input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}

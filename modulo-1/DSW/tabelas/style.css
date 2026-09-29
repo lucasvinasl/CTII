@@ -1,0 +1,20 @@
+table, th, td{
+    /* https://www-w3schools-com.translate.goog/html/html_table_borders.asp */
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-style: groove;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+
+th, td {
+  border-color:blue;
+}
+
+caption{
+    border: 1px solid red;
+}

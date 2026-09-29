@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CII - Imagens</title>
+</head>
+<body>
+    <h4>Atributos da tag img</h4>
+    <p>src - caminho da imagem</p>
+    <p>alt - texto alternativo (SEO, imagem não renderizada)</p>
+    <p>widht/height - dimensões</p>
+    <p>srcset - lista de imagens</p>
+    <p>loading - lazy / eager - estratégia de carregamento </p>
+    <p>decoding - decodificação assíncrona - async (padrão), sync, auto</p>
+    
+    <img src="../image/neymar.jpg" alt="É o ome" width="1200" height="800">
+
+    <img 
+    src="../image/neymar.jpg" 
+    alt="Tênis de corrida preto com solado branco" 
+    width="1200" 
+    height="800" 
+    loading="lazy" 
+    decoding="async">
+
+    <img 
+    src="../image/neymar.jpg"
+    srcset="logo.png 1x, logo-2x.png 2x, logo-3x.png 3x" 
+    alt="Logotipo da empresa" 
+    width="200" 
+    height="50">
+
+
+    <img 
+    src="../image/neymar.jpg" 
+    srcset="banner-p.jpg 480w,
+            banner-m.jpg 800w,
+            banner-g.jpg 1200w"
+    sizes="(max-width: 600px) 100vw,
+            (max-width: 1000px) 50vw,
+            1200px"
+    alt="Paisagem das montanhas ao pôr do sol" 
+    loading="lazy">
+
+    <p>Estilização CSS</p>
+    <p>
+        img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove o espaço em branco indesejado na base de elementos inline */
+    }
+
+    .card-avatar {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: 1 / 1;
+    /* Atua como 'background-size: cover' */
+    object-fit: cover; 
+    /* Ajusta o ponto focal do corte */
+    object-position: center top; 
+    border-radius: 50%;
+    }
+    </p>
+
+
+</body>
+</html>

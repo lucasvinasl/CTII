@@ -7,29 +7,217 @@
 </head>
 <body>
 
-    <h3># Listas Numeradas</h3>
-    <p>Ordem e numeração importam</p>
-    <p>Corpo com a tag ol, elementos com a tag li</p>
-    <p>O tipo de contador/indicador de ordem pode ser modificado, não necessariamente numérico</p>
+    <h3> 1 - Listas não Ordenadas </h3>
+    <p> Quando a ordem dos itens não altera o sentd do conteúdo.</p>
+    <p> tag < ul > declara a lista (unorder list)</p>
+    <p> tag < li > cada item da lista (list item) </p>
 
-    <h4>Primeira Lista</h4>
+    <ul>
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ul>
+    
+    <p>
+        Estruturas de navegação, como menu de sites constumam ser listas envolvidas dentro de um 
+        container < nav >.
+    </p>
+
+    <h4> Alterando o marcador </h4>
+    <p>Passa o seguinte atributo na tag ul ou ol da lista: </p>
+    <p> style="list-style-type: XPTO" - disc (padrão, não precisa declarar), circle, square, none</p>
+    <ul style="list-style-type: disc">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ul>
+
+    <ul style="list-style-type: circle">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ul>
+
+    <ul style="list-style-type: square">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ul>
+
+    <ul style="list-style-type: none">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ul>
+
+    <h4> Posição do marcador - Inside ou Ouside </h4>
+    <p>
+        list-style-position
+    </p>
+
+    <ul style="list-style-position: outside">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ul>
+
+    <ul style="list-style-position: inside">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ul>
+
+    <h4> Estilização do Marcador em CSS </h4>
+    <p> 
+        ul {
+            list-style-image: url('icone-bullet.svg');
+        }
+    </p>
+
+    <p>
+        ul li::marker {
+            color: #e63946;
+            font-size: 1.2rem;
+        }
+    </p>
+
+
+    <h3> 2 - Listas Ordenadas </h3>
+    <p> Quando a ordem dos itens altera o sentd do conteúdo, ordem numérica ou cronológica.</p>
+    <p> tag < ol > declara a lista (order list)</p>
+    <p> tag < li > cada item da lista (list item) </p>
+
     <ol>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
     </ol>
     
+    <p>
+        Estruturas de navegação, como menu de sites constumam ser listas envolvidas dentro de um 
+        container < nav >.
+    </p>
 
-    <h3># Listas Não Numeradas</h3>
-    <p>Ordem e numeração não importam</p>
-    <p>Corpo com a tag ul, elementos com a tag li</p>
-    <p>O tipo de contador/indicador de ordem pode ser modificado</p>
+    <h4>Alterando o Marcador</h4>
+    <p>
+        type como atributo da tabela
+    </p>
+    <p>type 1</p>
+    <ol type = "1">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ol>
 
-    <h4>Primeira Lista</h4>
+    <p>type A ou a - letra maiúscula ou minúscula</p>
+    <ol type = "A">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ol>
+
+    <p>type I ou i - número romano maiúscula ou minúscula</p>
+    <ol type = "I">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ol>
+
+    <p>start - contagem inicial do marcador (letra ou número)</p>
+    <ol type = "a" start="5">
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ol>
+
+    <p>reversed - contagem inicial em ordem decrescente/regressica do marcador (letra ou número)</p>
+    <p>é booleano, declara ou não declara</p>
+    <ol type = "a" reversed>
+        <li>Mofásico</li>
+        <li>Bifásico</li>
+        <li>Trifásico</li>
+    </ol>
+
+    <p>value - aplicado a um item, força o valor do marcador pular </p>
+    <ol type = "a" start="1">
+        <li>Mofásico</li>
+        <li value="20">Bifásico</li>
+        <li>Trifásico</li>
+    </ol>
+
+    <h4> Estilização do Marcador em CSS </h4>
+    <p> 
+        ol {
+        list-style-type: decimal; /* Padrão: 1, 2, 3... */
+        /* Outras opções: 
+            decimal-leading-zero (01, 02, 03...)
+            lower-alpha / upper-alpha (a, b, c... / A, B, C...)
+            lower-roman / upper-roman (i, ii, iii... / I, II, III...)
+            lower-greek (α, β, γ...) 
+        */
+        }
+    </p>
+
+    <p>
+        /* Remove marcadores padrão e inicia um contador */
+        ol.custom-list {
+        list-style: none;
+        counter-reset: meu-contador;
+        }
+
+        /* Incrementa e exibe o contador no ::before ou ::marker */
+        ol.custom-list li {
+        counter-increment: meu-contador;
+        }
+
+        ol.custom-list li::before {
+        content: counter(meu-contador, decimal) ") ";
+        color: #2a9d8f;
+        font-weight: bold;
+        }
+    </p>
+
+
+    <h3>3 - Listas de Descrição </h3>
+
+    <p>
+        Servem para associar termos a suas definições, pares de chave/valor, metadados de um artigo ou seções de perguntas e respostas (FAQ).
+    </p>
+
+    <p>
+        tag < dt > Description Term - Chave
+    </p>
+    <p>
+        tag < dd > Description Detail - Valor
+    </p>
+    <p>
+        No HTML5, é permitido agrupar pares dt/dd dentro de divs para facilitar o layout em CSS
+    </p>
+
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de Marcação de Hipertexto que define a estrutura do documento.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de Folhas de Estilo que controla a apresentação visual do documento.</dd>
+    </dl>
+
+
+    <h3>4 - Sublistas </h3>
+    <p>
+        Para criar listas dentro de listas, a nova lista < ul> ou < ol> deve ser inserida dentro da tag 
+        < li> do item pai, nunca solta diretamente entre dois < li >
+    </p>
+
     <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <li>Desenvolvimento Web
+            <ul>
+            <li>Front-end</li>
+            <li>Back-end</li>
+            </ul>
+        </li> <!-- O item pai só fecha após a sublista -->
+        <li>Banco de Dados</li>
     </ul>
+
+    
 </body>
 </html>
