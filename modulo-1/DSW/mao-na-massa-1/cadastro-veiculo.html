@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wash PDF - Cadastro de Veículo</title>
+    <link rel="stylesheet" href="./styles/cadastro.css">
 </head>
 
 <body>
-
-    <center>
-        <h1 class="titulo-index">Wash PDV</h1>
-        <p class="sub-tit-index">Plataforma de Gestão de Estética Automotiva</p>
-        <hr>
-        <p class="sub-tit-index">Realizar Cadastro do Veículo</p>
-
         <main>
+
+            <h1 class="titulo-index">Wash PDV</h1>
+            <p class="sub-tit-index">Plataforma de Gestão de Estética Automotiva</p>
+            <hr>
+            <p class="sub-tit-index">Realizar Cadastro do Veículo</p>
 
             <form action="/cadastrar-veiculo" method="POST">
 
@@ -61,20 +60,17 @@
                 <br>
 
                 <div>
-                    <button type="submit">Enviar Cadastro</button>
-                    <button type="reset">Limpar Campos</button>
+                    <button type="submit" class="default-btn">Enviar Cadastro</button>
+                    <button type="reset" class="default-btn">Limpar Campos</button>
                 </div>
 
             </form>
 
             <form action="index.html">
-                <button type="submit">Voltar</button>
+                <button type="submit" class="default-btn back">Voltar</button>
             </form>
 
         </main>
-
-    </center>
-
 </body>
 
 </html>
